@@ -19,7 +19,7 @@ def get_filters():
    # Get user input for city (chicago, new york city, washington).
  
     print('To start please choose between the next options: ')
-    print('1.Chicago 2. New York City 3. Washington')
+    print('1.Chicago 2. New York City 3. Washington remember to consider the spaces in New York City case')
     print('Note: The valid way to input the city is by the complete name, for example: new york city')
     
     #Input variable to start the function    
@@ -33,7 +33,7 @@ def get_filters():
         #Condition to request the user to try again
         if city not in ['chicago', 'new york city', 'washington']:         
             print('So sorry, it appears that you input a wrong city name, to continue   please choose between the next options: ')
-            print('1. Chicago 2. New York City 3. Washington')
+            print('1. Chicago 2. New York City 3. Washington remember to consider the spaces in New York City case')
             
         elif city == 'chicago':
             city_input = 'chicago.csv'
