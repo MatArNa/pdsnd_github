@@ -7,7 +7,8 @@ Date 10.11.2023
 Bikeshare Project
 
 ### Description
-Python project with data of Chicago, New York and Washington cities.
+Python project with data of Chicago, New York and Washington cities. The project require the user to follow instructions to reach
+their target information.
 
 ### Files used
 bikeshare.py
