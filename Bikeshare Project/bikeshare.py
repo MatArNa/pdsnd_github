@@ -170,8 +170,7 @@ def time_stats(df):
     
     print('The most popular hour is {}'.format(mode_hour))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    
 
 
 def station_stats(df):
@@ -202,8 +201,7 @@ def station_stats(df):
     
     print('The most common combination of start and end station is : {}'.format(mode_start_end))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    
 
 
 def trip_duration_stats(df):
@@ -224,8 +222,7 @@ def trip_duration_stats(df):
     
     print('The average travel duration for the trip is: {}'.format(avg_travel))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    
 
 
 def user_stats(df):
@@ -274,55 +271,8 @@ def user_stats(df):
           '''.format(earliest_birth, recent_birth, common_birth))
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
-
-def raw_data(df):
     
-    row_display = ''
-    start_row = 0
-    end_row = 5
-    
-    #Condition to ask the user if he/she want to see the row data
-    
-    while row_display not in ['yes', 'no']:
-        
-        print('Do you want to see the next 5 rows data? (Please answer with a yes or no)')
-        
-        row_display = input().lower()
-        
-        #Condition to ask the user to provide a valid answer
-        
-        if row_display not in ['yes', 'no']:
-            
-            print('So sorry, it appears that you input a wrong answer, to continue please choose between the next options: ')
-            print('1. Yes 2. No')
-            
-        #Condition to display th first 5 rows
-        
-        elif row_display == 'yes':
-                  
-                  print(df.head(5))
-                    
-                  #Condition to ask if the user want to keep seeing rows of data
-                                    
-                  while row_display == 'yes':
-                    
-                    print('Do you want to see more rows? (Please answer with yes or no)')
-                    
-                    start_row +=5
-                    end_row +=5
-                    row_display = input().lower()
-                    
-                    print(df[start_row:end_row])
-        
-        #Condition to brake de loop
-        
-        elif row_display == 'no':
-                  
-                  break
-                  
+                
     
 def main():
     while True:
@@ -333,7 +283,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        raw_data(df)
+        
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
